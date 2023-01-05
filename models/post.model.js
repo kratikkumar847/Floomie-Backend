@@ -31,6 +31,11 @@ const post = new mongoose.Schema({
         required : true
     },
 
+    pincode : {
+        type : Number,
+        default : 0
+    },
+
     fulladdress : {
         type : String,
         required : true
@@ -41,7 +46,7 @@ const post = new mongoose.Schema({
 
 
 //These will automatically generates the created and updated fields 
-renterSchema.set('timestamps' , true);
+post.set('timestamps' , true);
 
 
 module.exports = mongoose.model('Post', post)

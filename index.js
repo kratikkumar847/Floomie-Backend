@@ -22,12 +22,13 @@ mongoose.connect(process.env.DB_URI, ()=>{
 const homeRoutes = require("./routes/home.router");
 const userAuth = require("./routes/auth.user.router");
 const renterAuth = require("./routes/auth.renter.router");
-
+const postrouter = require("./routes/post.router");
 
 
 app.use( homeRoutes );
 app.use('/floomie/v1/api', userAuth)
 app.use('/floomie/v1/api', renterAuth)
+app.use('/floomie/v1/api', postrouter)
 
 
 
