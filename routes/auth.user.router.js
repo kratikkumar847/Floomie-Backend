@@ -12,4 +12,4 @@ router.post('/auth/user/signup', [signupVerification.addMiddlewaresToSignupReque
 router.post('/auth/user/signin' , authUser.signin);
 
 
-module.exports = router ; 
+module.exports = router; 
